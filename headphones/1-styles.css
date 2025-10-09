@@ -1,90 +1,92 @@
-@font-face {
-  font-family: 'holberton_school-icon';
-  src:  url('fonts/holberton_school-icon.eot?sq4eq4');
-  src:  url('fonts/holberton_school-icon.eot?sq4eq4#iefix') format('embedded-opentype'),
-    url('fonts/holberton_school-icon.ttf?sq4eq4') format('truetype'),
-    url('fonts/holberton_school-icon.woff?sq4eq4') format('woff'),
-    url('fonts/holberton_school-icon.svg?sq4eq4#holberton_school-icon') format('svg');
-  font-weight: normal;
-  font-style: normal;
-  font-display: block;
+/* ---- Reset ---- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-[class^="holberton_school-icon-"], [class*=" holberton_school-icon-"] {
-  /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'holberton_school-icon' !important;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-
-  /* Better Font Rendering =========== */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* ---- Variables ---- */
+:root {
+  --primary-color: #007bff;
+  --text-color: #fff;
+  --bg-color: #111;
+  --font-main: 'Arial', sans-serif;
 }
 
-.holberton_school-icon-arrow_1:before {
-  content: "\e900";
+/* ---- Base styles ---- */
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
 }
-.holberton_school-icon-arrow_2:before {
-  content: "\e901";
+
+/* ---- Hero section ---- */
+.hero {
+  background: url('headphones_hero_1.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
-.holberton_school-icon-arrow_3:before {
-  content: "\e902";
+
+/* Container centers content */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
 }
-.holberton_school-icon-arrow_4:before {
-  content: "\e903";
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 0;
 }
-.holberton_school-icon-arrow_5:before {
-  content: "\e904";
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
 }
-.holberton_school-icon-check:before {
-  content: "\e905";
+
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  justify-content: flex-end;
 }
-.holberton_school-icon-ic_bag:before {
-  content: "\e906";
+
+/* Hero text */
+.hero-content {
+  text-align: center;
+  margin-top: 100px;
 }
-.holberton_school-icon-ic_cart:before {
-  content: "\e907";
+
+.hero-content h2 {
+  font-size: 3rem;
+  margin-bottom: 20px;
 }
-.holberton_school-icon-ic_facebook:before {
-  content: "\e908";
+
+.hero-content p {
+  margin-bottom: 30px;
 }
-.holberton_school-icon-ic_hearing:before {
-  content: "\e909";
+
+.hero-content button {
+  background-color: var(--primary-color);
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
 }
-.holberton_school-icon-ic_instagram:before {
-  content: "\e90a";
-}
-.holberton_school-icon-ic_laptop:before {
-  content: "\e90b";
-}
-.holberton_school-icon-ic_money:before {
-  content: "\e90c";
-}
-.holberton_school-icon-ic_music:before {
-  content: "\e90d";
-}
-.holberton_school-icon-ic_sound:before {
-  content: "\e90e";
-}
-.holberton_school-icon-ic_twitter:before {
-  content: "\e90f";
-}
-.holberton_school-icon-ic_video:before {
-  content: "\e910";
-}
-.holberton_school-icon-menu:before {
-  content: "\e911";
-}
-.holberton_school-icon-search_1:before {
-  content: "\e912";
-}
-.holberton_school-icon-search_2:before {
-  content: "\e913";
-}
-.holberton_school-icon-star:before {
-  content: "\e914";
+
+/* ---- Mobile ---- */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
 }
