@@ -17,6 +17,7 @@
 body {
   font-family: var(--font-main);
   color: var(--text-color);
+  background-image: url(headphones_hero_1.jpg);
 }
 
 /* ---- Hero section ---- */
@@ -25,6 +26,12 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
 }
 
 /* Container centers content */
@@ -47,7 +54,23 @@ body {
   display: flex;
   gap: 20px;
   align-items: flex-end;
+  text-align: top;
+  margin: 0;
+  padding: 0;
 }
+/*existing code */
+.nav-links a {
+  color: var(--text-color);
+  text-decoration: none;
+  justify-content: flex-end;
+}
+
+/* Add hover and active states */
+.nav-links a:hover,
+.nav-links a:active {
+  color: #ff6565;
+}
+
 
 .nav-links a {
   color: var(--text-color);
@@ -78,13 +101,15 @@ body {
   font-size: 1rem;
   border-radius: 4px;
   cursor: pointer;
+  opacity: 0.9;
 }
 
 /* ---- Mobile ---- */
-@media (max-width: 768px) {
+@media (max-width: 480px) {
   .nav-links {
     flex-direction: column;
     gap: 10px;
+    
   }
 
   .hero-content h2 {
