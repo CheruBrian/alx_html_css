@@ -1,0 +1,27 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+/* ---- Variables ---- */
+:root {
+  --primary-color: #007bff;
+  --text-color: #fff;
+  --bg-color: #111;
+  --font-main: 'Arial', sans-serif;
+}
+
+/* ---- Base styles ---- */
+body {
+  font-family: var(--font-main);
+  color: var(--text-color);
+}
+
+/* ---- Hero section ---- */
+.hero {
+  background: url('headphones_hero_1.jpg') center/cover no-repeat;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+}
