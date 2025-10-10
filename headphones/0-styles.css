@@ -76,6 +76,7 @@ body {
   color: var(--text-color);
   text-decoration: none;
   justify-content: flex-end;
+  margin-left: auto;
 }
 
 /* Hero text */
