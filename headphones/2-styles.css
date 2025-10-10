@@ -1,92 +1,84 @@
-/* ---- Reset ---- */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/* ---- Variables ---- */
-:root {
-  --primary-color: #007bff;
-  --text-color: #fff;
-  --bg-color: #111;
-  --font-main: 'Arial', sans-serif;
-}
-
-/* ---- Base styles ---- */
+/* Overall layout */
 body {
-  font-family: var(--font-main);
-  color: var(--text-color);
+  background-image: url("headphones_hero_1.jpg");
+  background-size: cover;       /* make it fill the screen */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* no tiling */
+  height: 100%;                /* make sure it covers full height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;   
+  font-size: 16px;              /* text shows clearly on background */
 }
-
-/* ---- Hero section ---- */
-.hero {
-  background: url('headphones_hero_1.jpg') center/cover no-repeat;
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-}
-
-/* Container centers content */
-.container {
-  width: 90%;
-  max-width: 1200px;
-  margin: auto;
-}
-
-/* Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  padding: 20px 0;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-.nav-links a {
-  color: var(--text-color);
-  text-decoration: none;
-  justify-content: flex-end;
-}
-
-/* Hero text */
-.hero-content {
+/*header */
+header {
   text-align: center;
-  margin-top: 100px;
 }
 
-.hero-content h2 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+/*h2 */
+h2 {
+  text-align: center;
 }
 
-.hero-content p {
-  margin-bottom: 30px;
+/*pararaph */
+p {
+  text-align: center;
+  text-decoration: dashed;
+}
+/* image */
+.imager-row {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  margin: 50px;
 }
 
-.hero-content button {
-  background-color: var(--primary-color);
-  border: none;
-  padding: 10px 20px;
+/* Container for each image + text */
+.image-container {
+  position: relative;
+  text-align: center;
+  
+}
+
+/* Pentagon image */
+.image-container img {
+  width: 150px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Text inside the pentagon */
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   color: white;
-  font-size: 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
 }
 
-/* ---- Mobile ---- */
-@media (max-width: 768px) {
-  .nav-links {
+/* Description below the pentagon */
+.description {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+
+
+/* Layout: Vertical for mobile */
+@media screen and (max-width: 767px) {
+  .image-row {
+    display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-
-  .hero-content h2 {
-    font-size: 2rem;
+    align-items: center;
+    gap: 30px;
   }
 }
+
+
