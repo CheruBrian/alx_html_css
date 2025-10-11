@@ -7,11 +7,15 @@
 
 /* ---- Variables ---- */
 :root {
-  --primary-color: #007bff;
-  --text-color: #fff;
-  --bg-color: #111;
-  --font-main: 'Arial', sans-serif;
+    --primary-color: #FF6565;
+    --text-color: #071629;
+    --white: #FFFFFF;
+    --gray: #979797;
+    --light-gray: #F2F2F2;
+    --font-family: 'Source Sans Pro', sans-serif;
+    --max-width: 1000px;
 }
+
 
 /* ---- Base styles ---- */
 body {
@@ -39,6 +43,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: auto;
+  padding: 0 20px;
 }
 
 /* Navbar */
@@ -71,12 +76,21 @@ body {
   color: #ff6565;
 }
 
+button {
+  display: inline-block;
+  padding: 13px 31px;
+  border: none;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 0.875rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
 
 .nav-links a {
   color: var(--text-color);
   text-decoration: none;
   justify-content: flex-end;
-  margin-left: auto;
 }
 
 /* Hero text */
