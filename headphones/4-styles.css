@@ -1,0 +1,433 @@
+html {
+    scroll-behavior: smooth;
+}
+/*front-page */
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --primary-color: #FF6565;
+    --text-color: #071629;
+    --white: #FFFFFF;
+    --gray: #979797;
+    --light-gray: #F2F2F2;
+    --font-family: 'Source Sans Pro', sans-serif;
+    --max-width: 1000px;
+}
+
+.front-page {
+  background-image: url(Photo/images/headphones_hero_1.jpg);
+  background-size: cover;       /* make it fill the screen */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* no tiling */
+  height: 100%;                /* make sure it covers full height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: white;   
+  font-size: 16px;              /* text shows clearly on background */
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+}
+
+.logo img {
+    height: 32px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 2.5rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #071629;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: color 0.3s ease;
+    color: whitesmoke;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+    color: #FF6565;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(7, 22, 41, 0.8), rgba(7, 22, 41, 0.8));
+    background-image: url(Photo/images/headphones_hero_1.jpg);
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    padding: 12rem 0 8rem;
+}
+
+.hero-title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1rem;
+    margin-bottom: 2.5rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 31px;
+    border: none;
+    border-radius: 22px;
+    font-weight: 700;
+    font-size: 0.875rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+.btn-primary {
+    background: #FF6565;
+    color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:active {
+    opacity: 0.9;
+}
+
+.hero-description {
+    max-width: 637px;
+    margin: 3rem auto 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0 1rem;
+    }
+
+    .hero {
+        padding: 8rem 1rem 4rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .hero-description {
+        font-size: 0.875rem;
+    }
+}
+
+/*what-we-do */
+
+.what-we-do
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #fff;
+  color: #0f172a; /* dark slate */
+  text-align: center;
+  padding: 2rem;
+}
+
+.what-we-do {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 1rem;
+}
+
+.what-we-do h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  max-width: 700px;
+  margin: 0 auto 3rem auto;
+  color: #374151;
+  line-height: 1.6;
+}
+
+.services {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.service-item {
+  flex: 1 1 200px;
+  max-width: 220px;
+  padding: 1rem;
+}
+
+.icon {
+  font-size: 2.5rem;
+  color: #ff4c4c;
+  margin-bottom: 1rem;
+}
+
+.service-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Reults section */
+.result-part {
+  background-image: url(Photo/images/headphones_hero_2.jpg);
+  background-size: cover;       /* make it fill the screen */
+  background-position: center;  /* center the image */
+  background-repeat: no-repeat; /* no tiling */
+  height: 100%;                /* make sure it covers full height */
+  margin: 0;
+  font-family: Arial, sans-serif;
+  display: flex;
+  color: white;                 /* text shows clearly on background */
+}
+
+/* Optional: make the text readable even on bright backgrounds */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: -1;
+}
+/* Container for each image + text */
+.image-container {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the pentagon horizontally */
+  margin: 20px auto;
+}
+
+/* Pentagon image */
+.image-container img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+/* header section */
+header {
+    text-align: center;
+    content: center;
+    align-items: center;
+    line-height: 1.6;
+    margin: 8cap;
+    border-right: 18cap;
+    padding-block-start: 1cap;
+    text-align-last: center;
+    font-size: large;
+    text-anchor: middle;
+}
+
+/*Header 2 */
+h2 {
+    text-align: center;
+    text: bold;
+}
+
+/* Text inside the pentagon */
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Description below the pentagon */
+.description {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Layout: Horizontal for PC */
+@media screen and (min-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+/* Layout: Vertical for mobile */
+@media screen and (max-width: 767px) {
+  .image-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Contact-form */
+/* Reset defaults */
+.contact-form{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #ffffff;
+  color: #111;
+}
+
+/* Centering section */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: left;
+  padding: 20px;
+}
+
+/* Title */
+.contact-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Form container */
+.contact-form {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Labels */
+.contact-form label {
+  font-weight: 500;
+  color: #111;
+}
+
+/* Input fields */
+.contact-form input,
+.contact-form textarea {
+  border: none;
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-bottom: 1px solid #ff6363;
+}
+
+/* Button */
+.contact-form button {
+  background-color: #ff6363;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+  align-self: center;
+}
+
+.contact-form button:hover {
+  background-color: #ff4b4b;
+  transform: scale(1.05);
+}
+
+/* Footer section */
+.social-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* space between icons/links */
+}
+
+/* Style all links */
+.social-links a {
+  text-decoration: none;
+  color: white;
+  background-color: #ff6363;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-weight: 500;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effects */
+.social-links a:hover {
+  background-color: #ff4b4b;
+  transform: scale(1.1);
+}
+
+/* Optional: Different colors per network */
+.social-links .facebook { background-color: #1877F2; }
+.social-links .twitter { background-color: #1DA1F2; }
+.social-links .instagram { background-color: #E4405F; }
+.social-links .linkedin { background-color: #0077B5; }
