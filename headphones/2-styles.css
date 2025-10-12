@@ -1,57 +1,100 @@
-/* Overall layout */
 body {
-  background-image: url("headphones_hero_1.jpg");
+  background-image: url(Photo/images/headphones_hero_2.jpg);
   background-size: cover;       /* make it fill the screen */
   background-position: center;  /* center the image */
   background-repeat: no-repeat; /* no tiling */
   height: 100%;                /* make sure it covers full height */
   margin: 0;
   font-family: Arial, sans-serif;
-  color: white;   
-  font-size: 16px;              /* text shows clearly on background */
+  display: flex;
+  color: white;                 /* text shows clearly on background */
 }
 
-/* Our Results Section */
-.our-results {
-    padding: 6rem 0;
-    background: linear-gradient(rgba(7, 22, 41, 0.8), rgba(7, 22, 41, 0.8)), 
-                url('images/headphones_hero_2.jpg') no-repeat center center;
-    background-size: cover;
-    color: var(--white);
+/* Optional: make the text readable even on bright backgrounds */
+body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4); /* dark overlay */
+  z-index: -1;
+}
+/* Container for each image + text */
+.image-container {
+  position: relative;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers the pentagon horizontally */
+  margin: 20px auto;
+}
+
+/* Pentagon image */
+.image-container img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+/* header section */
+header {
     text-align: center;
+    content: center;
+    align-items: center;
+    line-height: 1.6;
+    margin: 8cap;
+    border-right: 18cap;
+    padding-block-start: 1cap;
+    text-align-last: center;
+    font-size: large;
+    text-anchor: middle;
 }
 
-.results {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 2rem;
+/*Header 2 */
+h2 {
+    text-align: center;
+    text: bold;
 }
 
-.pentagon {
-    position: relative;
-    width: 190px;
-    height: 190px;
-    background: var(--primary-color);
-    clip-path: polygon(50% 0%, 100% 38%, 82% 100%, 18% 100%, 0% 38%);
-    margin: 0 auto;
+/* Text inside the pentagon */
+.image-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+
+/* Description below the pentagon */
+.description {
+  margin-top: 10px;
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+/* Layout: Horizontal for PC */
+@media screen and (min-width: 768px) {
+  body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    transition: transform 0.3s ease;
+  }
+
+  .image-row {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
 }
 
-.pentagon:hover {
-    transform: scale(1.05);
-}
-
-.result-value {
-    font-size: 2.875rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
-
-.result-label {
-    font-size: 0.875rem;
-    max-width: 120px;
+/* Layout: Vertical for mobile */
+@media screen and (max-width: 767px) {
+  .image-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 }
