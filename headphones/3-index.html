@@ -1,29 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
-    <title>Contact us</title>
-    <meta name="description" content="what we do">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="3-styles.css"></head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="3-styles.css" />
+</head>
 <body>
-    <main>
-       <header class="hero">
-        <nav>
-          <contianer>
-          <div class="container">
-          <div class="usename">username</div>
-          <input type="text" placeholder="USername" minlength="3" maxlength="15">
-          <div class="email">email</div>
-          <input type="email" placeholder="email">
-          <div class="message">message</div>
-          <input type="text" placeholder="text">
-          <button class="call">CALL TO ACTION </button>
-       </div>
-       </contianer>
-       </nav>
-       </header>
-       </main>
-    
+  <section class="contact-section">
+    <h2>Contact us</h2>
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required />
+
+      <label for="message">Your message</label>
+      <textarea id="message" name="message" rows="4" placeholder="Type your message" required></textarea>
+
+      <button type="submit">CALL TO ACTION</button>
+    </form>
+  </section>
 </body>
 </html>
