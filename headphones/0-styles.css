@@ -15,7 +15,7 @@
 }
 
 body {
-  background-image: url("headphones_hero_1.jpg");
+  background-image: url(Photo/images/headphones_hero_1.jpg);
   background-size: cover;       /* make it fill the screen */
   background-position: center;  /* center the image */
   background-repeat: no-repeat; /* no tiling */
