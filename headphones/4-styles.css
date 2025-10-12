@@ -493,3 +493,36 @@ site-footer {
 .social-links .twitter { background-color: #1DA1F2; }
 .social-links .instagram { background-color: #E4405F; }
 .social-links .linkedin { background-color: #0077B5; }
+
+
+/* Responsive: Mobile */
+@media (max-width: 480px) {
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+    }
+
+    .nav-links li {
+        margin: 0 1rem;
+    }
+
+    .hero {
+        padding: 8rem 1rem 4rem;
+    }
+
+    .hero-title {
+        font-size: 1.5rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .hero-description {
+        font-size: 0.875rem;
+    }
+}
