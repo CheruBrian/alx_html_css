@@ -1,5 +1,8 @@
-html {
+html body {
     scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    top: 0;
 }
 /*front-page */
 /* Reset and base styles */
@@ -21,13 +24,14 @@ html {
 .front-page {
   background-image: url(Photo/images/headphones_hero_1.jpg);
   background-size: cover;       /* make it fill the screen */
-  background-position: cover;  /* center the image */
+  background-position: center;  /* center the image */
   background-repeat: no-repeat; /* no tiling */
-  height: 1000%;                /* make sure it covers full height */
-  margin: 0;
+  height: 100vh;                /* make sure it covers full height */
   width: 100%;
   font-family: Arial, sans-serif;
   color: white;   
+  padding: 0;
+  background-attachment: scroll;
   font-size: 16px;              /* text shows clearly on background */
 }
 
