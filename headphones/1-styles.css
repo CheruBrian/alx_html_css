@@ -41,7 +41,8 @@ html body {
 
 /* Header */
 .header {
-    position: fixed;
+    position: top;
+    height: 1px;
     top: 0;
     left: 0;
     width: 100%;
@@ -250,5 +251,4 @@ body {
         font-size: 0.875rem;
     }
 }
-
 
