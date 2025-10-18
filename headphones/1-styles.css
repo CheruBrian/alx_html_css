@@ -3,14 +3,10 @@ html body {
     margin: 0;
     padding: 0;
     top: 0;
-}
-/*front-page */
-/* Reset and base styles */
-* {
-    margin: 0;
-    padding: 0;
     box-sizing: border-box;
+    
 }
+
 :root {
     --primary-color: #FF6565;
     --text-color: #071629;
@@ -23,11 +19,13 @@ html body {
 
 .front-page {
   background-image: url(Photo/images/headphones_hero_1.jpg);
-  background-size: cover;       /* make it fill the screen */
-  background-position: center;  /* center the image */
+  background-size: fill;       /* make it fill the screen */
+  background-position: fill;  /* center the image */
   background-repeat: no-repeat; /* no tiling */
-  height: 100vh;                /* make sure it covers full height */
+  height: 10000%;                /* make sure it covers full height */
   width: 100%;
+  margin: 0;
+  padding: 0;
   font-family: Arial, sans-serif;
   color: white;   
   padding: 0;
@@ -43,10 +41,9 @@ html body {
 
 /* Header */
 .header {
-    position: top;
-    top: 1px;
-    left: 40;
-    height: 2px;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
@@ -54,8 +51,8 @@ html body {
 .navbar {
     display: flex;
     justify-content: space-between;
-    align-items: left;
-    padding: 1px 0;
+    align-items: center;
+    padding: 1rem 0;
 }
 
 .logo img {
